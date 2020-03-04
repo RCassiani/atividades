@@ -3,7 +3,7 @@
 API para manipular uma lista de usuários.
 Todos os registros são salvos em um arquivo TXT.
 
-# Ações
+# Endpoints
 
 **Listar Usuários**
 
@@ -97,7 +97,7 @@ Todos os registros são salvos em um arquivo TXT.
     }
     ```
 
-## Responses
+# Responses
 
 A API retornará a seguinte estrutura:
 
@@ -108,7 +108,7 @@ A API retornará a seguinte estrutura:
 }
 ```
 
-## Response - Status
+# Response - Status
 
 A API pode retornar os seguintes status:
 
