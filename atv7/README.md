@@ -99,12 +99,12 @@ Todos os registros são salvos em um arquivo TXT.
 
 ## Responses
 
-A resposta das requisições podem ser:
+A API retornará a seguinte estrutura:
 
 ```javascript
 {
   "message" : string,
-  "data"    : array
+  "data"    : array     // Se houver dados
 }
 ```
 
