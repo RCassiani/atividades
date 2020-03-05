@@ -95,10 +95,10 @@ class Usuario
                 }
             }
 
-            if($find) {
+            if ($find) {
                 file_put_contents($this->filename, $newLines);
                 return $message = "Registro atualizado";
-            }else{
+            } else {
                 http_response_code(404);
                 throw new Exception("Registro não encontrado");
             }
@@ -129,16 +129,16 @@ class Usuario
                     $l = json_decode($l);
                     if ($l->email == $this->email) {
                         $find = true;
-                    }else{
+                    } else {
                         $newLines .= json_encode($l) . "\n";
                     }
                 }
             }
 
-            if($find) {
+            if ($find) {
                 file_put_contents($this->filename, $newLines);
                 return $message = "Registro excluido";
-            }else{
+            } else {
                 http_response_code(404);
                 throw new Exception("Registro não encontrado");
             }
@@ -174,6 +174,25 @@ class Usuario
         } catch (Exception $e) {
             throw new Exception($e->getMessage());
         }
+    }
+
+    /**
+     * @param $data
+     * @return mixed
+     */
+    public function checkPhoneData($data)
+    {
+        $lenght = strlen($data);
+        return (($lenght == 10 || $lenght == 11) && ctype_digit($data));
+    }
+
+    /**
+     * @param $data
+     * @return mixed
+     */
+    public function checkEmailData($data)
+    {
+        return (filter_var($data, FILTER_VALIDATE_EMAIL));
     }
 
 }

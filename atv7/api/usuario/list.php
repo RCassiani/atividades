@@ -9,21 +9,28 @@ header("Access-Control-Allow-Methods: GET");
 
 
 $core = new Core();
-$core->allowMethods = ['GET'];
-$core->requestMethod = strtoupper($_SERVER['REQUEST_METHOD']);
+$core->allowMethods = ['GET']; //Metodo permitido
+$core->requestMethod = strtoupper($_SERVER['REQUEST_METHOD']); //Metodo recebido
+
+//Verificação do Metodo Permitido
 if ($core->getAllowMethods()) {
     try {
+        //Cria instancia de usuario
         $usuario = new Usuario();
         $list = $usuario->listAll();
+
+        //Retorna Status - Já preenchido anteriormente?
         $status = http_response_code();
         if (!$status)
-            http_response_code(200);
+            http_response_code(200); //Retorna Status - OK
         echo json_encode(["message" => "Lista de usuários", "data" => $list]);
     } catch (Exception $e) {
+        //Retorna Status - Bad Request
         http_response_code(400);
         echo json_encode(["message" => $e->getMessage()]);
     }
 } else {
+    //Retorna Status - Method Not Allowed
     http_response_code(405);
     echo json_encode(["message" => "Método não permitido"]);
 }

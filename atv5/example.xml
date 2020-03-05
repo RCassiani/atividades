@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<usuarios>
+    <usuario>
+        <id>1</id>
+        <nome>Rodrigo</nome>
+        <sobrenome>Cassiani</sobrenome>
+        <email>rcassiani@email.com</email>
+        <telefone>19988888888</telefone>
+        <login>rcassiani</login>
+    </usuario>
+    <usuario>
+        <id>2</id>
+        <nome>Rogerio</nome>
+        <sobrenome>Barbosa</sobrenome>
+        <email>rbarbosa@email.com</email>
+        <telefone>19977777777</telefone>
+        <login>rbarbosa</login>
+    </usuario>
+    <usuario>
+        <id>3</id>
+        <nome>Maria</nome>
+        <sobrenome>Costa</sobrenome>
+        <email>mcosta@email.com</email>
+        <telefone>19966666666</telefone>
+        <login>mcosta</login>
+    </usuario>
+    <usuario>
+        <id>4</id>
+        <nome>Ana</nome>
+        <sobrenome>Fontes</sobrenome>
+        <email>afontes@email.com</email>
+        <telefone>19955555555</telefone>
+        <login>afontes</login>
+    </usuario>
+</usuarios>
